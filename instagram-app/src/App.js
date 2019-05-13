@@ -1,12 +1,15 @@
 import React from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
-// import dummyData from './dummyData';
+import PostContainer from './components/PostContainer/PostContainer';
+import CommentSection from './components/CommentSection/CommentSection';
+import dummyData from './dummy-data';
 import './App.css';
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      profiles: dummyData
     }
   };
 
@@ -15,9 +18,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <SearchBar />
-        </header>
+
+        <SearchBar />
+        <PostContainer profiles={this.state.profiles} />
+        {/* <CommentSection /> */}
+
       </div>
     );
   }
