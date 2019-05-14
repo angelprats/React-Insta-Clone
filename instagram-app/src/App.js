@@ -7,10 +7,13 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      profiles: dummyData
+      profiles: []
     }
   };
 
+  componentDidMount() {
+    this.setState({ profiles: dummyData })
+  }
 
 
   render() {
