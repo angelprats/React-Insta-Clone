@@ -1,14 +1,17 @@
 import React from 'react';
 import Post from './Post';
 
+
 const PostContainer = props => {
   return (
     <div>
-      {props.profiles.map(item => (
+      {props.profiles.map(props => (
         <Post
-          thumbnailUrl={item.thumbnailUrl}
-          username={item.username}
-          imageUrl={item.imageUrl} />
+          thumbnailUrl={props.thumbnailUrl}
+          username={props.username}
+          imageUrl={props.imageUrl}
+          comments={props.comments}
+        />
       ))}
     </div>
   )
