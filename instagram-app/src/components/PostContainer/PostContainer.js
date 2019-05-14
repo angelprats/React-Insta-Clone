@@ -11,6 +11,8 @@ const PostContainer = props => {
           username={props.username}
           imageUrl={props.imageUrl}
           comments={props.comments}
+          likes={props.likes}
+          timestamp={props.timestamp}
         />
       ))}
     </div>

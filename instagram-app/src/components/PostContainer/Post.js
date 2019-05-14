@@ -14,11 +14,18 @@ const Post = props => {
         </div>
 
         <img src={props.imageUrl} />
+        <p>Likes {props.likes}</p>
+
       </div>
 
       <div>
         <CommentSection comments={props.comments} />
       </div>
+      <p>{props.timestamp}</p>
+      <form>
+        <input placeholder="Add a comment..." />
+
+      </form>
 
     </div>
   )
