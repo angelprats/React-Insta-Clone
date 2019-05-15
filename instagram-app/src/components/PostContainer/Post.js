@@ -22,11 +22,6 @@ const Post = props => {
         <CommentSection comments={props.comments} />
       </div>
       <p>{props.timestamp}</p>
-      <form>
-        <input placeholder="Add a comment..." />
-
-      </form>
-
     </div>
   )
 }

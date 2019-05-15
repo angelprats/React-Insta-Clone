@@ -15,7 +15,9 @@ class CommentSection extends React.Component {
         {this.state.comments.map(comment =>
           <Comment comment={comment} />
         )}
-
+        <form>
+          <input placeholder="Add a comment..." />
+        </form>
       </div>
     )
   }

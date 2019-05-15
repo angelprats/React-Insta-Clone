@@ -1,7 +1,8 @@
 import React from 'react';
-import SearchBar from './components/SearchBar/SearchBar';
-import PostContainer from './components/PostContainer/PostContainer';
+import withAuthenticate from './components/Authentication/withAuthenticate';
 import dummyData from './dummy-data';
+import LoginPage from './components/Login/LoginPage';
+import PostPage from './components/PostContainer/PostPage';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,15 +19,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <SearchBar />
-        <PostContainer profiles={this.state.profiles} />
-
-      </div>
+     <PostPage profiles={this.state.profiles}/>
     );
   }
 
 }
 
 
-export default App;
+export default withAuthenticate(App)(LoginPage);
