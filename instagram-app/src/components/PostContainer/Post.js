@@ -1,8 +1,9 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
-
+import LikeSection from './LikeSection';
 
 const Post = props => {
+
   return (
     <div>
       <div>
@@ -14,11 +15,14 @@ const Post = props => {
         </div>
 
         <img src={props.imageUrl} />
-        <p>Likes {props.likes}</p>
+        {/* <p>Likes {props.likes}</p> */}
 
       </div>
 
       <div>
+        <LikeSection
+          likes={props.likes}
+        />
         <CommentSection comments={props.comments} />
       </div>
       <p>{props.timestamp}</p>

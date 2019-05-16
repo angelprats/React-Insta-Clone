@@ -4,6 +4,7 @@ import dummyData from './dummy-data';
 import LoginPage from './components/Login/LoginPage';
 import PostPage from './components/PostContainer/PostPage';
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
